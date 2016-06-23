@@ -35,6 +35,7 @@
   },
   "homepage": "https://github.com/ui5experts/ui5-toolbox#readme",
   "devDependencies": {
+    "coveralls": "^2.11.9",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^1.0.0",
