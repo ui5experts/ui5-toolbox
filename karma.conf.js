@@ -16,6 +16,7 @@ module.exports = function(config) {
       'karma-qunit',
       'karma-openui5',
       'karma-chrome-launcher',
+      'karma-phantomjs-launcher',
       'karma-coverage'
     ],
 

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "test": "karma start"
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
@@ -40,7 +40,9 @@
     "karma-coverage": "^1.0.0",
     "karma-ie-launcher": "^1.0.0",
     "karma-openui5": "^0.2.1",
+    "karma-phantomjs-launcher": "^1.0.0",
     "karma-qunit": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.7",
     "qunitjs": "^1.14.0"
   }
 }
