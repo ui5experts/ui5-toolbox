@@ -24,7 +24,7 @@ module.exports = function(config) {
         config: {
           theme: 'sap_bluecrystal',
           resourceRoots: {
-            "ui5experts.toolbox": '/'
+            "ui5experts.toolbox": '/base'
           }
         }
 //        mockserver: {
@@ -43,7 +43,18 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/**/*.js'
+      {
+        pattern: 'src/**/*.js',
+        watched: true,
+        included: false,
+        served: true
+      },
+      {
+        pattern: 'test/**/*.js',
+        watched: true,
+        included: true,
+        served: true
+      }
     ],
 
 
