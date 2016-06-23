@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '.',
 
 
     // frameworks to use
@@ -24,7 +24,8 @@ module.exports = function(config) {
         config: {
           theme: 'sap_bluecrystal',
           resourceRoots: {
-            "ui5experts.toolbox": '/base'
+            'ui5experts.toolbox': '/base/src',
+            'ui5experts.toolbox.test.unit': '/base/test/unit'
           }
         }
 //        mockserver: {
@@ -50,7 +51,7 @@ module.exports = function(config) {
         served: true
       },
       {
-        pattern: 'test/**/*.js',
+        pattern: 'test/unit/**/*.js',
         watched: true,
         included: true,
         served: true
@@ -105,4 +106,4 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   })
-}
+};
