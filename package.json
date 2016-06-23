@@ -35,6 +35,7 @@
   "devDependencies": {
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.0.0",
     "karma-ie-launcher": "^1.0.0",
     "karma-openui5": "^0.2.1",
     "karma-qunit": "^1.0.0",
