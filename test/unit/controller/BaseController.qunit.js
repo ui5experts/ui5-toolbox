@@ -19,12 +19,13 @@ sap.ui.define([
   });
 
 
-
   QUnit.module("BaseController - Helpers", {
     beforeEach: function () {
       this.oBaseController = new BaseController();
       this.oComponentStub = new ManagedObject();
-      this.oComponentStub.setModel(new FakeI18nModel(), "i18n");
+      this.oComponentStub.setModel(new FakeI18nModel({
+          key1 : "4711"
+      }), "i18n");
 
       sinon.stub(this.oBaseController, "getOwnerComponent").returns(this.oComponentStub);
     },
@@ -37,6 +38,10 @@ sap.ui.define([
 
   QUnit.test("Test getText", function (assert) {
     assert.ok(this.oBaseController.getText, "method getText doesn't exist.");
+    assert.equal(this.oBaseController.getText("key1"), "4711", "wrong text for key");
+    assert.notEqual(this.oBaseController.getText("key2"), "key2", "if no then key should returned");
   });
+
+
 
 });

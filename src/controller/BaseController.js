@@ -7,7 +7,7 @@ sap.ui.define([
   return Controller.extend("ui5experts.toolbox.controller.BaseController", {
 
     getText: function (sKey, aParams) {
-
+        return this.getOwnerComponent().getModel("i18n").getResourceBundle().getText(sKey, aParams);
     }
 
   });
