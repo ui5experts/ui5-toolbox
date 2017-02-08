@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS && npm run -s lint",
+    "lint": "eslint 'src/**/*.js' & eslint 'test/**/*.js'",
+    "docs": "jsdoc -c jsdoc-conf.json"
   },
   "repository": {
     "type": "git",
@@ -17,16 +19,16 @@
     "utilities",
     "library"
   ],
-  "author": "UI5Experts",
+  "author": {
+    "name": "Christian Schuff",
+    "email": "christian.schuff@ui5experts.com",
+    "url": "http://www.ui5experts.com"
+  },
   "contributors": [
     {
       "name": "HP Seitz",
       "email": "hpseitz@mypro.de",
       "url": "http://www.mypro.de"
-    },
-    {
-      "name": "Christian Schuff",
-      "email": "christian.schuff@gmail.com"
     }
   ],
   "license": "MIT",
@@ -36,6 +38,10 @@
   "homepage": "https://github.com/ui5experts/ui5-toolbox#readme",
   "devDependencies": {
     "coveralls": "^2.11.9",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "jsdoc": "^3.4.3",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^1.0.1",
     "karma-coverage": "^1.0.0",
